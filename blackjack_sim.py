@@ -165,12 +165,12 @@ def create_blackjack_game(user_input):
             display_player(player)
             player_result = check_cards(player)
             player_count = get_count(player)
-        if player_result == "WIN":
-            print("You win!")
-            return 1
-        elif player_result == "BUST":
-            print("You Bust, dealer wins.")
-            return -1
+            if player_result == "WIN":
+                print("You win!")
+                return 1
+            elif player_result == "BUST":
+                print("You Bust, dealer wins.")
+                return -1
         else:
             while get_count(opponent) < 17:
                 print("Dealer hits!")
@@ -209,5 +209,5 @@ def create_blackjack_game(user_input):
 
 
 if __name__ == "__main__":
-    pass
-    #create_blackjack_game(None)
+    #pass
+    create_blackjack_game(None)
